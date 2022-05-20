@@ -18,13 +18,13 @@ struct ret foo (char i)
 	if (i == 's')
 	{
 		r.type = S;
-		r.ret = malloc(6);
+		r.ret = malloc(6 * sizeof(char));
 		sprintf((char*)r.ret, "hello");
 	}
 	else if (i == 'i')
 	{
 		r.type = I;
-		r.ret = malloc(4);
+		r.ret = malloc(sizeof(int));
 		*((int*)r.ret) = 69;
 	}
 
